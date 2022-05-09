@@ -6,7 +6,7 @@
 
 body { 
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right rgb(241, 141, 141), rgb(129, 238, 184));
+  background: linear-gradient(to right, rgb(241, 141, 141), rgb(129, 238, 184));
 }
 
 .grille { 
@@ -56,6 +56,6 @@ backface-visibility: hidden;
 .active { 
   transform: rotateY(180deg);
 }
-img {
+/* img {
   display: none;
-}
+} */
