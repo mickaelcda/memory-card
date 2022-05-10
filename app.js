@@ -1,8 +1,11 @@
 const cartes = document.querySelectorAll('.carte');
+const tentative = document.querySelector('.tentative');
+const btnRejouer = document.querySelector('.rejouer');
 
 let carteRetournee = false;
 let premiereCarte, secondeCarte;
 let verouillage = false;
+let nbTentative = 0;
 
 cartes.forEach(carte => {
     carte.addEventListener('click', retourneCarte)
@@ -46,7 +49,8 @@ function correspondance(){
             verouillage = false;
         }, 1500)
     }
-
+    nbTentative = nbTentative + 1;
+    tentative.innerText = `Coup(s) : ${nbTentative}`
 }
 
 function aleatoire(){
@@ -56,3 +60,9 @@ function aleatoire(){
     })
 }
 aleatoire();
+
+btnRejouer.addEventListener('click', reset);
+
+function reset() {
+    window.location.reload();
+}
